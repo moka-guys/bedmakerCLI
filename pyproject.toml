@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "bedmaker"
+version = "0.1.0"          # Specify your package version here
+description = ""           # Your package description
+authors = ["Graeme Smith"] # Update with your email
+license = "MIT"
+
+# Define your package dependencies here
+[tool.poetry.dependencies]
+python = "^3.12"
+tinydb = "4.8.0"
+typer = "0.9.0"
+rich = "13.5.2"
+pandas = "2.2.1"
+
+# Define development dependencies here
+[tool.poetry.dev-dependencies]
+pytest = "*"
+tox = "*"
+coverage = "*"
+pytest-cov = "*"
+
+# [tool.poetry.scripts] section is used to create command-line executables
+[tool.poetry.scripts]
+# bedfiles = "bedmaker.bedfiles:app"
+# coordinates = "bedmaker.coordinates:app"
+# genes = "bedmaker.genes:app"
+# mane = "bedmaker.mane:app"
+# panels = "bedmaker.panels:app"
+transcripts = "bedmaker.transcripts.cli:app"
+
+[tool.poetry.urls]
+Home = "https://github.com/moka-guys/bedmaker"
